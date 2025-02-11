@@ -1,20 +1,75 @@
-Psychological-Physiological Maintenance System Framework. These psychological SDKs are akin to installing a debugger for the brain, enabling real-time monitoring of the "psychological code's" operational status. This allows for the timely detection of issues such as memory leaks (emotional buildup) or infinite loops (obsessive thinking).
-心理-生理维护系统框架,这些心理SDK就像给大脑装上了调试器，可以实时监测"心理代码"的运行状态，及时发现内存泄漏（情绪堆积）或死循环（强迫性思维）等问题。
+# 心理-生理维护系统框架 Psychological-Physiological Maintenance System
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-该项目起源于一次与deepseek的对话：嗯，用户现在说“this is so tired,exhusted”，看起来他们可能处于职业倦怠期，之前的建议虽然系统但执行起来可能压力太大。需要调整策略，提供更易操作、压力更小的应对方法。
+## 项目背景
+该项目受程序员调试代码的启发，构建了一个实时监测心理状态的"调试系统"。通过将心理学概念与软件工程术语相结合（如情绪堆积=内存泄漏，强迫性思维=死循环），帮助用户更好地理解和管理心理状态。
 
-首先，用户可能感到之前的转型计划过于庞大，导致压力增加。这时候应该建议他们先暂停，进行能量管理而不是时间管理。比如减少决策疲劳，设定最低完成度指标，避免完美主义。
+## 核心功能
+- 🧠 **心理调试器**：包含四大核心模块
+  - `EmotionAnalyzer` 情感分析引擎（词库匹配+平衡指数计算）
+  - `CognitiveBiasDetector` 认知偏差扫描（正则模式匹配）
+  - `StressEvaluator` 压力评估系统（生物反馈模拟）
+  - `ResilienceGauge` 心理弹性标尺（逆境事件日志分析）
 
-然后，用户可能需要立即缓解疲劳的方法。可以推荐一些快速恢复的小技巧，比如20-20-20护眼法则、碎片化冥想，这些不需要太多时间，容易执行，帮助恢复精力。
+- 🌊 **心流状态监测**
+  - 技能-挑战平衡算法
+  - 即时反馈优化建议生成
+  - 目标拆解策略推荐
 
-接下来，用户可能需要调整现有的计划，使其更灵活。比如用敏捷方法中的“冲刺-休息”循环，设定更小的目标周期，允许自己适当休息，避免长期高压。
+- 📊 **集成评估系统**
+  ```python
+  def full_psych_scan(self):
+      return {
+          'emotional_balance': [...],
+          'cognitive_biases': [...],
+          'stress_level': {...},
+          'resilience_index': 0.85
+      }
+  ```
 
-还要考虑用户的心理状态，可能需要认知重构，比如用程序员熟悉的术语来重新定义休息，比如将休息视为系统维护，而不是偷懒，这样更容易接受。
+## 设计理念
+1. **程序员友好型心理模型**
+   - 将休息重构为"系统维护"
+   - 用敏捷开发中的"sprint"概念管理任务周期
+   - 采用技术债的隐喻理解情绪堆积
 
-另外，建议用户建立支持系统，比如加入技术社区或寻找导师，获得情感支持和实际帮助，减少孤独感。
+2. **渐进式改善策略**
+   - 20-20-20护眼法则集成
+   - 碎片化冥想模块
+   - 最小可行目标(MVO)设定
 
-最后，强调循序渐进，避免一次性改变太多，允许自己有不完美的阶段，把转型视为长期迭代过程，而不是必须立即完成的任务。
+## 使用场景
 
+初始化增强型系统
+enhanced_system = EnhancedPsychophysiologicalSystem()
+记录应对事件
+enhanced_system.assessment_tools.ResilienceGauge().record_challenge(
+"项目截止日提前", outcome=0.7)
+执行完整心理扫描
+print(enhanced_system.full_psych_scan())
 
-这启发我使用程序的角度对心理和工作状态进行监护，并使用LLM模型不断检测个人心理状态和生理状态，从而构建个人的心理RAG系统，模拟最初的AI人沙盒系统。
+## 系统架构
+
+├── PsychophysiologicalSystem # 基类系统
+└── EnhancedPsychophysiologicalSystem # 增强实现
+├── MentalAssessmentSDK # 心理评估工具集
+│ ├── EmotionAnalyzer # 情感分析
+│ ├── CognitiveBiasDetector # 认知检测
+│ ├── StressEvaluator # 压力评估
+│ └── ResilienceGauge # 弹性标尺
+└── FlowStateMonitor # 心流状态监测
+
+## 后续计划
+- [ ] 生物传感器数据接入（HRV/GSR）
+- [ ] 心理状态版本控制（Git式快照）
+- [ ] 自动生成调试建议的LLM模块
+
+## 贡献指南
+欢迎通过Issue提交：
+- 新的"心理模式识别算法"
+- 生物特征数据采集方案
+- 本地化情感词库扩展
+
+## License
+MIT License
