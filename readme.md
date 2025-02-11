@@ -1,0 +1,2 @@
+Psychological-Physiological Maintenance System Framework. These psychological SDKs are akin to installing a debugger for the brain, enabling real-time monitoring of the "psychological code's" operational status. This allows for the timely detection of issues such as memory leaks (emotional buildup) or infinite loops (obsessive thinking).
+心理-生理维护系统框架,这些心理SDK就像给大脑装上了调试器，可以实时监测"心理代码"的运行状态，及时发现内存泄漏（情绪堆积）或死循环（强迫性思维）等问题。
