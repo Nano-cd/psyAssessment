@@ -131,3 +131,18 @@ class NutritionEngine:
             f"微量元素零食包x{max(0, 2 - self.nutrient_balance['微量元素'])}",
             "抗氧化茶饮" if self.nutrient_balance['抗氧化剂'] < 2 else "平衡状态"
         ]
+
+
+# 晨间启动程序（实证有效的行为干预）
+def morning_routine():
+    # 光疗优先于咖啡因摄入
+    expose_to_light(lux=10000, duration=10)  # 模拟日出光谱的灯
+    
+    # 具身认知干预
+    power_pose(timer=120)  # 扩展性姿势站立2分钟
+    
+    # 微观意义构建
+    write_three_win()  # 快速记录前日3个小成就
+    
+    # 压力具象化
+    visualize_stress_as_object()  # 将焦虑想象成可处理的实体
