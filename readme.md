@@ -43,21 +43,39 @@
 
 初始化增强型系统
 enhanced_system = EnhancedPsychophysiologicalSystem()
+
+
 记录应对事件
 enhanced_system.assessment_tools.ResilienceGauge().record_challenge(
 "项目截止日提前", outcome=0.7)
+
+
 执行完整心理扫描
 print(enhanced_system.full_psych_scan())
 
 ## 系统架构
 
 ├── PsychophysiologicalSystem # 基类系统
+
+
 └── EnhancedPsychophysiologicalSystem # 增强实现
+
+
 ├── MentalAssessmentSDK # 心理评估工具集
+
+
 │ ├── EmotionAnalyzer # 情感分析
+
+
 │ ├── CognitiveBiasDetector # 认知检测
+
+
 │ ├── StressEvaluator # 压力评估
+
+
 │ └── ResilienceGauge # 弹性标尺
+
+
 └── FlowStateMonitor # 心流状态监测
 
 ## 后续计划
