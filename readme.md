@@ -88,6 +88,7 @@ print(enhanced_system.full_psych_scan())
 - 新的"心理模式识别算法"
 - 生物特征数据采集方案
 - 本地化情感词库扩展
+- 前端后端小伙伴帮助搭建可以方便使用的平台
 
 ## License
 MIT License
