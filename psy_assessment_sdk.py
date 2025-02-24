@@ -1,5 +1,5 @@
 from V2 import PsychophysiologicalSystem
-
+from transformers import pipeline
 
 class MentalAssessmentSDK:
     class EmotionAnalyzer:
@@ -7,16 +7,20 @@ class MentalAssessmentSDK:
             self.emotion_lexicon = self._load_emotion_dictionary()
             self.temporal_window = 7  # 分析时间窗口(天)
 
-        def _load_emotion_dictionary(self):
+        """加载情感词库"""
+
+        @staticmethod
+        def _load_emotion_dictionary():
             """加载情感词库"""
             return {
-                'positive': ['希望', '平静', '成就感'],
-                'negative': ['焦虑', '疲惫', '自我怀疑'],
+                'positive': ['希望', '平静', '成就感', '开心', '喜悦', '迫不及待'],
+                'negative': ['焦虑', '疲惫', '自我怀疑', '绝望'],
                 'neutral': ['例行', '观察', '等待']
             }
 
+        """文本情感分析"""
+
         def analyze_journal(self, text):
-            """日记文本情感分析"""
             from collections import defaultdict
             emotion_counts = defaultdict(int)
             for word, categories in self.emotion_lexicon.items():
@@ -25,7 +29,23 @@ class MentalAssessmentSDK:
                         emotion_counts[word] += 1
             return self._calculate_emotional_balance(emotion_counts)
 
-        def _calculate_emotional_balance(self, counts):
+        @staticmethod
+        def analyze_bert(self, text):
+            from collections import defaultdict
+            emotion_counts = defaultdict(int)
+            # 加载训练好的模型和分词器
+            classifier = pipeline('sentiment-analysis', model='./sentiment_model', tokenizer='./sentiment_model')
+
+            # 进行情感预测
+            result = classifier(text)
+            if result.label == "label_1":
+                emotion_counts["positive"] += 1
+            else:
+                emotion_counts["neagtive"] += 1
+            return self._calculate_emotional_balance(emotion_counts)
+
+        @staticmethod
+        def _calculate_emotional_balance(counts):
             """情感平衡指数计算"""
             total = sum(counts.values())
             if total == 0:
